@@ -18,6 +18,9 @@ class Grape{
      */
     private $id;
     
+     /**
+     * @Assert\Type(type="AppBundle\Entity\Grape")     
+     */
     /**
      * @ORM\Column(type="string", length=100)
      */

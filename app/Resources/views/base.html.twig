@@ -2,12 +2,26 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Wijnbeheer{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+    <div id="navigation">
+            {% block navigation %}
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/rek">Fles in rek leggen</a></li>
+                    <li><a href="/zoek">Lekkere wijn zoken</a></li>
+                </ul>
+            {% endblock %}
+    </div>
+    
+    <div id="content">
         {% block body %}{% endblock %}
+    </div>
+            
+       
         {% block javascripts %}{% endblock %}
     </body>
 </html>

@@ -19,11 +19,13 @@ class WineType extends AbstractType{
                 ->add('bestConsumationYear')           
                               ->add('variety')
                 ->add('priceRange')
-                ->Add('grapes', CategoryType::class)
+                ->Add('grapes', GrapeType::class)
                 ->add('food')
                 ->add('place')
                 ->add('giftComment');
     }
+    
+    
 }
 
 

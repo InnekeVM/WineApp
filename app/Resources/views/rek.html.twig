@@ -1,0 +1,30 @@
+{%extends "base.html.twig"%}
+
+{% block title %}Wijnkelder{% endblock %}
+
+{% block body %}
+    {% for rack in racks %} 
+        <table>
+            <thead><tr>Rek {{rack.rack}}</tr></thead>
+            <tbody>
+                
+                {%for row in rack %}
+                    <tr>
+                        {% for spot in row %}
+                            {% if wine is empty %}
+                        <a href="/rek/{{place.id}}" title = "Vrije plaats">
+                            <td class="empty">                     
+
+                            </td>   
+                        </a>
+                    {% else %}
+                        <td class="taken" title="{{wine.name}}" >
+                        </td>
+                    {% endif %}
+                {% endfor %}
+            </tr>             
+        {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
+{% endblock %}

@@ -18,6 +18,9 @@ class Wine {
     private $id;
 
     /**
+     * @Assert\NotBlank()
+     */
+    /**
      * @ORM\Column(type="string", length=100) 
      */
     private $name;
@@ -38,6 +41,9 @@ class Wine {
     private $bestConsumationYear;
 
     /**
+     * @Assert\Type("\DateTime")
+     */
+    /**
      * @ORM\Column(type="date") 
      */
     private $dateIn;
@@ -47,6 +53,9 @@ class Wine {
      */
     private $giftComment;
 
+    /**
+     * @Assert\NotBlank()
+     */
     /**
      * @ORM\ManyToOne(targetEntity="Variety", inversedBy="wine")  
      * @ORM\JoinColumn(name="varietyId", referencedColumnName="id") 
@@ -65,6 +74,9 @@ class Wine {
      */
     private $grapes;
 
+    /**
+     * @Assert\NotBlank()
+     */
     /**
      * @ORM\OneToMany(targetEntity="Place", mappedBy="wine")     
      */
